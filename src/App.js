@@ -1,22 +1,12 @@
 import { useState } from "react";
 import Blogs from "./components/Pages/Blogs";
-// import "./App.css";
 
 function App() {
-  const onDelete = (id) => {
-    console.log(id);
-    setArticle(
-      article.filter((e) => {
-        return e !== id;
-      })
-    );
-  };
-
   const [article, setArticle] = useState([
     {
       id: 1,
       title: "Meditation",
-      content: "Meditaion keeps your mental helth good.",
+      content: "Meditation keeps your mental health good.",
     },
     {
       id: 2,
@@ -26,13 +16,26 @@ function App() {
     {
       id: 3,
       title: "Running",
-      content: "Keep your Heart helthy",
+      content: "Keep your Heart healthy",
     },
   ]);
 
+  const onDelete = (delete_id) => {
+    console.log(delete_id);
+    setArticle(
+      article.filter((e) => {
+        return e !== delete_id;
+      })
+    );
+  };
+
   return (
     <div className="App">
-      <Blogs article={article} onDelete={onDelete} />
+      <Blogs
+        article={article}
+        onDelete={onDelete}
+        //  onEdit={onEdit}
+      />
     </div>
   );
 }

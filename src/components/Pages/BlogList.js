@@ -1,10 +1,14 @@
 import React from "react";
 
-export const BlogList = () => {
+export const BlogList = ({ articleList, onDelete }) => {
   return (
     <div>
-      <p>saf</p>
-      <p>saf</p>
+      <ul>
+        <li>{articleList.id}</li>
+        <li>{articleList.title}</li>
+        <li>{articleList.content}</li>
+        <button onClick={() => onDelete(articleList)}>Delete</button>
+      </ul>
     </div>
   );
 };
