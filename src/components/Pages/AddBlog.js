@@ -6,7 +6,7 @@ const AddBlog = ({ addBlog }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e.target.value);
+    // console.log(e.target.value);
     if (!title) {
       alert("Title cannot be blank");
     } else if (!content) {
@@ -14,6 +14,8 @@ const AddBlog = ({ addBlog }) => {
     }
 
     addBlog(title, content);
+    setTitle("");
+    setContent("");
   };
 
   return (

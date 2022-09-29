@@ -30,9 +30,19 @@ function App() {
     );
   };
 
-  // user data get loaded by addBlog form
+  // input from user get added
   const addBlog = (title, content) => {
-    console.log(title, content);
+    // we need generated id for unique key value
+    let id = article.length !== 0 ? article[article.length - 1].id + 1 : 1;
+
+    const newBlog = {
+      id: id,
+      title: title,
+      content: content,
+    };
+
+    setArticle([...article, newBlog]);
+    console.log(newBlog);
   };
 
   return (

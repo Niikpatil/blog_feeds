@@ -11,8 +11,8 @@ const Blogs = ({ article, onDelete }) => {
         article.map((articleList) => (
           <BlogList
             articleList={articleList}
-            onDelete={onDelete}
             key={articleList.id}
+            onDelete={onDelete}
           />
         ))
       )}
