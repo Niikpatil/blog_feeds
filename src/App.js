@@ -1,9 +1,18 @@
+import { useState } from "react";
+import Blogs from "./components/Pages/Blogs";
 // import "./App.css";
 
-import Blogs from "./components/Pages/Blogs";
-
 function App() {
-  const content = [
+  const onDelete = (id) => {
+    console.log(id);
+    setArticle(
+      article.filter((e) => {
+        return e !== id;
+      })
+    );
+  };
+
+  const [article, setArticle] = useState([
     {
       id: 1,
       title: "Meditation",
@@ -19,11 +28,11 @@ function App() {
       title: "Running",
       content: "Keep your Heart helthy",
     },
-  ];
+  ]);
 
   return (
     <div className="App">
-      <Blogs content={content} />
+      <Blogs article={article} onDelete={onDelete} />
     </div>
   );
 }
