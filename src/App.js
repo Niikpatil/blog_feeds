@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AddBlog from "./components/Pages/AddBlog";
 import Blogs from "./components/Pages/Blogs";
 
 function App() {
@@ -29,8 +30,14 @@ function App() {
     );
   };
 
+  // user data get loaded by addBlog form
+  const addBlog = (title, content) => {
+    console.log(title, content);
+  };
+
   return (
     <div className="App">
+      <AddBlog addBlog={addBlog} />
       <Blogs
         article={article}
         onDelete={onDelete}
