@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <nav class="navbar navbar-expand-lg navbar-secondary bg-light shadow-sm">
-      <div class="container-fluid">
+      <div class="container-fluid"> 
         <nav class="navbar navbar-light ">
           <a class="navbar-brand " href="/">
             OPEN BLOG

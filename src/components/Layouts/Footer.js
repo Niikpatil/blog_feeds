@@ -1,11 +1,13 @@
 import React from "react";
 
-export const Footer = () => {
+const Footer = () => {
   return (
-    <div className="container-l  p-1  bg-secondary">
-      <footer className="py-2 my-6">
-        <span className="text-light">Made by NiK</span>
+    <div className="container-fluid position-absolute bottom-0 end-0">
+      <footer className="bg-secondary py-2 text-light">
+        <span className="">Made by NiK</span>
       </footer>
     </div>
   );
 };
+
+export default Footer;

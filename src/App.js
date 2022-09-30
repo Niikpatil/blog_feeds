@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Footer } from "./components/Layouts/Footer";
-import Header from "./components/Layouts/Header";
+import { Route, Routes } from "react-router-dom";
 import AddBlog from "./components/Pages/AddBlog";
 import Blogs from "./components/Pages/Blogs";
+import Header from "./components/Layouts/Header";
+import Footer from "./components/Layouts/Footer";
 
 function App() {
   const [article, setArticle] = useState([
@@ -54,8 +55,13 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* <AddBlog addBlog={addBlog} /> */}
-      <Blogs article={article} onDelete={onDelete} />
+      <Routes>
+        <Route
+          path="/"
+          element={<Blogs article={article} onDelete={onDelete} />}
+        ></Route>
+        <Route path="addblog" element={<AddBlog addBlog={addBlog} />}></Route>
+      </Routes>
       <Footer />
     </div>
   );
