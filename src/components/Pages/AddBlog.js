@@ -6,26 +6,25 @@ const AddBlog = ({ addBlog }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(e.target.value);
     if (!title) {
       alert("Title cannot be blank");
     } else if (!content) {
       alert("Content cannot be blank");
+    } else {
+      addBlog(title, content);
+      setTitle("");
+      setContent("");
     }
-
-    addBlog(title, content);
-    setTitle("");
-    setContent("");
   };
 
   return (
-    <div>
+    <>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="title"
           value={title}
-          placeholder="Hope this title grabe readers attention"
+          placeholder="Hope this title grab readers attention"
           onChange={(e) => {
             setTitle(e.target.value);
           }}
@@ -41,7 +40,7 @@ const AddBlog = ({ addBlog }) => {
         />
         <button type="submit">Add Blog</button>
       </form>
-    </div>
+    </>
   );
 };
 

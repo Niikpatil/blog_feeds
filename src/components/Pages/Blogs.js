@@ -3,7 +3,7 @@ import { BlogList } from "./BlogList";
 
 const Blogs = ({ article, onDelete }) => {
   return (
-    <div>
+    <>
       <h1>Articals for Readers</h1>
       {article.length === 0 ? (
         <h3>No Content to display</h3>
@@ -16,7 +16,7 @@ const Blogs = ({ article, onDelete }) => {
           />
         ))
       )}
-    </div>
+    </>
   );
 };
 

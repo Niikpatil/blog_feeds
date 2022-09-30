@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Footer } from "./components/Layouts/Footer";
+import Header from "./components/Layouts/Header";
 import AddBlog from "./components/Pages/AddBlog";
 import Blogs from "./components/Pages/Blogs";
 
@@ -23,16 +25,21 @@ function App() {
 
   const onDelete = (delete_id) => {
     console.log(delete_id);
+
+    // ___Case-1 : To Delete___
+    // const DeleteTask = [...article];
+    // DeleteTask.splice(delete_id, 1);
+
     setArticle(
-      article.filter((e) => {
-        return e !== delete_id;
+      article.filter((id) => {
+        return id !== delete_id;
       })
     );
   };
 
   // input from user get added
   const addBlog = (title, content) => {
-    // we need generated id for unique key value
+    // we need to a generate id for unique key value
     let id = article.length !== 0 ? article[article.length - 1].id + 1 : 1;
 
     const newBlog = {
@@ -40,19 +47,16 @@ function App() {
       title: title,
       content: content,
     };
-
     setArticle([...article, newBlog]);
-    console.log(newBlog);
+    // console.log(newBlog);
   };
 
   return (
     <div className="App">
-      <AddBlog addBlog={addBlog} />
-      <Blogs
-        article={article}
-        onDelete={onDelete}
-        //  onEdit={onEdit}
-      />
+      <Header />
+      {/* <AddBlog addBlog={addBlog} /> */}
+      <Blogs article={article} onDelete={onDelete} />
+      <Footer />
     </div>
   );
 }
