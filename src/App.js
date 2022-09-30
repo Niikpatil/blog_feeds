@@ -55,12 +55,13 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <AddBlog addBlog={addBlog} />
       <Routes>
         <Route
           path="/"
           element={<Blogs article={article} onDelete={onDelete} />}
         ></Route>
-        <Route path="addblog" element={<AddBlog addBlog={addBlog} />}></Route>
+        {/* <Route path="addblog" element={<AddBlog addBlog={addBlog} />}></Route> */}
       </Routes>
       <Footer />
     </div>

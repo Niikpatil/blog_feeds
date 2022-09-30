@@ -1,12 +1,17 @@
 import React from "react";
 
 const Footer = () => {
+  let footerStyle = {
+    position: "fixed",
+    bottom: "0",
+    width: "100%",
+    padding: "0.5%",
+  };
+
   return (
-    <div className="container-fluid position-absolute bottom-0 end-0">
-      <footer className="bg-secondary py-2 text-light">
-        <span className="">Made by NiK</span>
-      </footer>
-    </div>
+    <footer className="bg-secondary text-light" style={footerStyle}>
+      <span className="">Made by NiK</span>
+    </footer>
   );
 };
 
