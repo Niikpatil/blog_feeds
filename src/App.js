@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import AddBlog from "./components/Pages/AddBlog";
 import Blogs from "./components/Pages/Blogs";
 import Header from "./components/Layouts/Header";
 import Footer from "./components/Layouts/Footer";
+import About from "./components/Layouts/About";
 
 function App() {
   const [article, setArticle] = useState([
@@ -55,13 +56,13 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <AddBlog addBlog={addBlog} />
       <Routes>
         <Route
           path="/"
           element={<Blogs article={article} onDelete={onDelete} />}
         ></Route>
-        {/* <Route path="addblog" element={<AddBlog addBlog={addBlog} />}></Route> */}
+        <Route path="addblog" element={<AddBlog addBlog={addBlog} />}></Route>
+        <Route path="/about" element={<About />}></Route>
       </Routes>
       <Footer />
     </div>

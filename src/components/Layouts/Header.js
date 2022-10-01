@@ -1,25 +1,26 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <nav class="navbar navbar-expand-lg navbar-secondary bg-light shadow-sm">
-      <div class="container-fluid"> 
+      <div class="container-fluid">
         <nav class="navbar navbar-light ">
-          <a class="navbar-brand " href="/">
+          <Link to="/" class="navbar-brand ">
             OPEN BLOG
-          </a>
+          </Link>
         </nav>
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="/addblog">
+              <Link to="/addblog" class="nav-link">
                 Blog Write
-              </a>
+              </Link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/about">
+              <Link to="/about" class="nav-link">
                 About
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
