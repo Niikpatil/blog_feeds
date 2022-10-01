@@ -2,18 +2,33 @@ import React from "react";
 import { BlogList } from "./BlogList";
 
 const Blogs = ({ article, onDelete }) => {
+  const ColoredLine = () => (
+    <hr
+      style={{
+        backgroundColor: "blue",
+        height: 3,
+        width: "80%",
+      }}
+    />
+  );
+
   return (
     <>
-      <h2>Articals for Readers</h2>
+      <div className="justify-content-center ">
+        <h4>Articals for Readers</h4>
+        <ColoredLine />
+      </div>
+
       {article.length === 0 ? (
-        <h3>No Content to display</h3>
+        <h4>No Content to display</h4>
       ) : (
         article.map((articleList) => (
-          <BlogList
-            articleList={articleList}
+          <div
+            className="my-6 d-flex flex-column justify-content-center     "
             key={articleList.id}
-            onDelete={onDelete}
-          />
+          >
+            <BlogList articleList={articleList} onDelete={onDelete} />
+          </div>
         ))
       )}
     </>

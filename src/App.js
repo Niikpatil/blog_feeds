@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
+
 import AddBlog from "./components/Pages/AddBlog";
 import Blogs from "./components/Pages/Blogs";
 import Header from "./components/Layouts/Header";
 import Footer from "./components/Layouts/Footer";
 import About from "./components/Layouts/About";
+import "./App.css";
+// import { Main } from "./components/Layouts/Main";
 
 function App() {
   const [article, setArticle] = useState([
@@ -28,7 +31,7 @@ function App() {
   const onDelete = (delete_id) => {
     console.log(delete_id);
 
-    // ___Case-1 : To Delete___
+    // ___Method - 1 : To Delete using splice___
     // const DeleteTask = [...article];
     // DeleteTask.splice(delete_id, 1);
 
@@ -62,7 +65,7 @@ function App() {
           element={<Blogs article={article} onDelete={onDelete} />}
         ></Route>
         <Route path="addblog" element={<AddBlog addBlog={addBlog} />}></Route>
-        <Route path="/about" element={<About />}></Route>
+        <Route path="about" element={<About />}></Route>
       </Routes>
       <Footer />
     </div>
