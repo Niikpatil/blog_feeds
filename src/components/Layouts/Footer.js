@@ -11,7 +11,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-secondary text-light " style={footerStyle}>
-      <span className="">Made by NiK</span>
+      <div className="text-end">Made by NiK</div>
     </footer>
   );
 };

@@ -7,28 +7,25 @@ const Blogs = ({ article, onDelete }) => {
       style={{
         backgroundColor: "blue",
         height: 3,
-        width: "80%",
+        width: "100%",
       }}
     />
   );
 
   return (
     <>
-      <div className="justify-content-center ">
-        <h4>Articals for Readers</h4>
-        <ColoredLine />
-      </div>
+      <h4 className="text-center">Articals for Readers</h4>
+      <ColoredLine />
 
       {article.length === 0 ? (
         <h4>No Content to display</h4>
       ) : (
         article.map((articleList) => (
-          <div
-            className="my-6 d-flex flex-column justify-content-center     "
+          <BlogList
+            articleList={articleList}
+            onDelete={onDelete}
             key={articleList.id}
-          >
-            <BlogList articleList={articleList} onDelete={onDelete} />
-          </div>
+          />
         ))
       )}
     </>

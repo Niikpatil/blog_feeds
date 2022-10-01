@@ -2,7 +2,7 @@ import React from "react";
 
 export const BlogList = ({ articleList, onDelete }) => {
   return (
-    <div className="container my-3">
+    <div className="container my-4">
       <div className="card rounded-3 shadow-lg">
         <h6 className="d-flex justify-content-between card-header">
           {articleList.title}
@@ -10,7 +10,7 @@ export const BlogList = ({ articleList, onDelete }) => {
             <button
               type="button"
               className="btn btn-close btn-sm
-            "
+        "
               aria-label="Close"
               onClick={() => onDelete(articleList)}
             ></button>
