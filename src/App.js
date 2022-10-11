@@ -3,28 +3,29 @@ import { Route, Routes } from "react-router-dom";
 
 import AddBlog from "./components/Pages/AddBlog";
 import Blogs from "./components/Pages/Blogs";
-// import Header from "./components/Layouts/Header";
-// import Footer from "./components/Layouts/Footer";
 import About from "./components/Layouts/About";
-import "./App.css";
 import Main from "./components/Layouts/Main";
+import "./App.css";
 
 function App() {
   const [article, setArticle] = useState([
     {
       id: 1,
       title: "Meditation",
-      content: "Meditation keeps your mental health good.",
+      content:
+        "Meditation can give you a sense of calm, peace and balance that can benefit both your emotional well-being and your overall health. You can also use it to relax and cope with stress by refocusing your attention on something calming. Meditation can help you learn to stay centered and keep inner peace.",
     },
     {
       id: 2,
-      title: "Stay fit",
-      content: "Physical activity important for Health",
+      title: "Physical activity",
+      content:
+        "Regular moderate intensity physical activity can increase HDL (good) cholesterol while maintaining or offsetting increases in LDL (bad) cholesterol. Research supports the theory that high intensity aerobic activity is needed to lower LDL levels",
     },
     {
       id: 3,
       title: "Running",
-      content: "Keep your Heart healthy",
+      content:
+        " Running is an incredibly efective fat burning exercise. In fact, when it comes to losing weight, it's difficult to beat. According to data from the American Council on Exercise, a runner who weighs 180 pounds burns 170 calories when running for 10 minutes at a steady pace",
     },
   ]);
 
