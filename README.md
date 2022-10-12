@@ -11,11 +11,7 @@
 
 ## Project Description
 
-<!-- ![screen shot](https://github.com/Niikpatil/open_blog/blob/master/public/project_pics/Articles.png)
-
-![screen shot](https://github.com/Niikpatil/open_blog/blob/master/public/project_pics/Write_blog.png)
-
-![screen shot](https://github.com/Niikpatil/open_blog/blob/master/public/project_pics/About.png) -->
+![screen shot](https://github.com/Niikpatil/ReactJS_List/blob/main/img/blog.png)
 
 # License
 
