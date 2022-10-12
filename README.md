@@ -16,5 +16,7 @@
 # License
 
 This project is licensed under
-<img src="https://
-poser.pugx.org/laravel/framework/license.svg" alt="License">
+
+<p align="center">
+<a href="https://github.com/Niikpatil/Employee_DBS/blob/master/LICENSE"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+</p>
